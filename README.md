@@ -8,33 +8,33 @@ Flynn’s taxonomy distinguishes multi-processor computer architectures along tw
 	
 **Single Instruction, Single Data (SISD)**
 
--A serial (non-parallel) compute.
+- A serial (non-parallel) compute.
 
--Single instruction: CPU acts on a single stream of instructions during any one clock cycle.
+- Single instruction: CPU acts on a single stream of instructions during any one clock cycle.
 
--Single data: only one data stream is being used as input during any one clock cycle.
+- Single data: only one data stream is being used as input during any one clock cycle.
 
 **Single Instruction, Multiple Data (SIMD)**
 
--All processing units execute the same instruction at any given clock cycle.
+- All processing units execute the same instruction at any given clock cycle.
 
--Multiple data: Each processing unit can operate on a different data element.
+- Multiple data: Each processing unit can operate on a different data element.
 
 **Multiple Instruction, Single Data (MISD)**
 
--A single data stream is fed into multiple processing units.
+- A single data stream is fed into multiple processing units.
 
--Each processing unit operates on the data independently via independent instruction stream.
+- Each processing unit operates on the data independently via independent instruction stream.
 
 **Multiple Instruction, Multiple Data (MIMD)**
 
--Currently, the most common type of parallel computer.
+- Currently, the most common type of parallel computer.
 
--Most modern computers fall into this category.
+- Most modern computers fall into this category.
+ 
+- Multiple Instruction: every processor may be executing a different instruction stream.
 
--Multiple Instruction: every processor may be executing a different instruction stream.
-
--Multiple Data: every processor may be working with a different data stream.
+- Multiple Data: every processor may be working with a different data stream.
 	
 (ii.) Consider a 4-dimensional hypercube computer architecture of p processors. What is:
 (a) the diameter?
@@ -44,11 +44,13 @@ Flynn’s taxonomy distinguishes multi-processor computer architectures along tw
 ### ans:
 
 (a) the diameter?
-	-Diameter is log(p)
+- Diameter is log(p)
+
 (b) the connectivit?,
-	-Arc connectivity is log(p)
+- Arc connectivity is log(p)
+
 (c) the bisection width.
-	-Bisection width is p/2
+- Bisection width is p/2
 	
 (iii.) Repeat the above for a 3-Dimensional cube of p processors?
 
@@ -73,9 +75,9 @@ Speedup is limited by the total time needed for the sequential (serial) part of 
 
 a) How will you define a Thread in parallel computing?
 ### ans:
--A process is an instance of a program that is executing more or less autonomously on a physical processor.
+- A process is an instance of a program that is executing more or less autonomously on a physical processor.
 
--A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system. 
+- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system. 
 
 
 b) Give four characteristic features of a thread.
@@ -98,7 +100,7 @@ void matrixMult(int *matrixA, int *matrixB, int N)
 	{
 		int total_multiplication_operations = N*number_of_elements;
 		
-		#pragma omp for 
+		#pragma omp parallel for 
 		for(int m=0; m<total_multiplication_operations; m++)
 		{
 			int i = m/(2*N);
