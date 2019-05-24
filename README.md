@@ -275,20 +275,20 @@ c) Briefly describe five technologies appropriate for processing big-data.
 ### ans:
 **Distributed file systems (GFS, HDFS, CEPH, etc.)**
 
-  -MapReduce and other models for distributed programming
-  -NoSQL databases
-  -Grid & cloud computing
-  -Large-scale machine learning
-  -High performance computing
-  -Parallel File Systems (Lustre, GPFS, BeeGFS, SIONLib, ADIOS, PHDF5, etc.)
+  - MapReduce and other models for distributed programming
+  - NoSQL databases
+  - Grid & cloud computing
+  - Large-scale machine learning
+  - High performance computing
+  - Parallel File Systems (Lustre, GPFS, BeeGFS, SIONLib, ADIOS, PHDF5, etc.)
 
 d) Give 4 characteristic features of NoSQL databases.
 ### ans:
 
-  -Not using the relational model (nor the SQL language)
-  -Designed to run on large clusters (horizontally scalable)
-  -No schema - fields can be freely added to any record
-  -Open source
+  - Not using the relational model (nor the SQL language)
+  - Designed to run on large clusters (horizontally scalable)
+  - No schema - fields can be freely added to any record
+  - Open source
 
 
 
