@@ -59,7 +59,7 @@ Flynn’s taxonomy distinguishes multi-processor computer architectures along tw
 
 (i.) Derive Amdahl’s law.
 ### ans:
-**Amdahl’s derivation**
+**Amdahl’s derivation** Assumes strong scaling
 Assuming a sequential execution time of To. Only Tf execution time can be parallized in Ts. so the fraction of code that can be impoved is gives as P = Tf/Ts.
 The improved execution time Ta is gives as Ta = (1-P)To + (P/N) (To)
 
@@ -83,7 +83,7 @@ a) How will you define a Thread in parallel computing?
 ### ans:
 - A process is an instance of a program that is executing more or less autonomously on a physical processor. Each process has its own private memory (which is which they are used in distributed memory programming).Communication between processes is done through message passing.
 
-- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system.  Each thread is a different stream of control that can execute its instructions independently, allowing a multithreaded process to perform numerous tasks concurrently. Threads are on the same shared memory address(which is why they are used for shared memory programming) so one must care of synchronization in order to avoid race conditions.
+- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system.  Each thread is a different stream of control that can execute its instructions independently, allowing a multithreaded process to perform numerous tasks concurrently. Threads are on the same shared memory address (which is why they are used for shared memory programming) or heap so one must care of synchronization in order to avoid race conditions.
 ### The Values of Using Threads
 - Performance gains from multiprocessing hardware (parallelism)
 - Increased application throughput
