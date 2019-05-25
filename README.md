@@ -59,7 +59,13 @@ Flynn’s taxonomy distinguishes multi-processor computer architectures along tw
 
 (i.) Derive Amdahl’s law.
 ### ans:
-**Amdahl’s law** states that in parallelization, if P is the proportion of a system or program that can be made parallel, and 1-P is the proportion that remains serial, then the maximum speedup that can be achieved using N number of processors is 1/((1-P)+(P/N).
+**Amdahl’s derivation**
+Assuming a sequential execution time of To. Only Tf execution time can be parallized in Ts. so the fraction of code that can be impoved is gives as P = Tf/Ts.
+The improved execution time Ta is gives as Ta = (1-P)To + (P/N) (To)
+
+The overall system speed up(S) is S = To/Ta = 1/((1-P)+P/N)  
+
+**Amdahl’s special case** states that in parallelization, if P is the proportion of a system or program that can be made parallel, and 1-P is the proportion that remains serial, then the maximum speedup that can be achieved using N number of processors is 1/((1-P)+(P/N).
 
 If N tends to infinity then the maximum speedup tends to 1/(1-P)
 
