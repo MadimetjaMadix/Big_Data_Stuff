@@ -75,9 +75,9 @@ Speedup is limited by the total time needed for the sequential (serial) part of 
 
 a) How will you define a Thread in parallel computing?
 ### ans:
-- A process is an instance of a program that is executing more or less autonomously on a physical processor.
+- A process is an instance of a program that is executing more or less autonomously on a physical processor. Each process has its own private memory (which is which they are used in distributed memory programming).Communication between processes is done through message passing.
 
-- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system.  Each thread is a different stream of control that can execute its instructions independently, allowing a multithreaded process to perform numerous tasks concurrently
+- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system.  Each thread is a different stream of control that can execute its instructions independently, allowing a multithreaded process to perform numerous tasks concurrently. Threads are on the same shared memory address(which is why they are used for shared memory programming) so one must care of synchronization in order to avoid race conditions.
 ### The Values of Using Threads
 - Performance gains from multiprocessing hardware (parallelism)
 - Increased application throughput
@@ -96,6 +96,7 @@ a) How will you define a Thread in parallel computing?
 - Servers
 - Repetitive task
 - Numerical programs
+- where its possible to use divede and conquer strategy
 
 
 b) Give four characteristic features of a thread.
