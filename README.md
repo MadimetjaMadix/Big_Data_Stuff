@@ -77,12 +77,31 @@ a) How will you define a Thread in parallel computing?
 ### ans:
 - A process is an instance of a program that is executing more or less autonomously on a physical processor.
 
-- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system. 
+- A thread is defined as an independent stream of instructions that can be scheduled to run as such by the operating system.  Each thread is a different stream of control that can execute its instructions independently, allowing a multithreaded process to perform numerous tasks concurrently
+### The Values of Using Threads
+- Performance gains from multiprocessing hardware (parallelism)
+- Increased application throughput
+- Increased application responsiveness
+- Replacing process-to-process communications
+- Efficient use of system resources
+- Simplified realtime processing
+- Simplified signal handling
+- The ability to make use of the inherent concurrency of distributed objects
+- There is one binary that runs well on both uniprocessors and multiprocessors
+- The ability to create well-structured programs
+- There can be a single source for multiple platforms
+
+### What Kind of Programs to Thread?
+- Independent task
+- Servers
+- Repetitive task
+- Numerical programs
 
 
 b) Give four characteristic features of a thread.
 ### ans:
-- Process ID, process group ID, user ID, and group ID ??
+- the program counter, the general registers, the stack pointer, etc.. and the stack ??
+- Thread ID
 
 
 c) Write an openMP function:
