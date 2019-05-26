@@ -68,7 +68,7 @@ int* rank2TensorMult(int *matrixA, int dimsA[2], int *matrixB, int dimsB[2], int
 				
 				// Get matrix B indexes:
 				rowB = colA;
-				colB = ((int)(mult_op/dimsB[0]))%dimsB[1]; // multiplication_index divided by row in matrix B 
+				colB = ((int)(mult_op/(float)dimsB[0]))%dimsB[1]; // multiplication_index divided by row in matrix B 
 				//and mod by column length of matrix B.
 	
 				
