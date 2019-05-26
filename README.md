@@ -107,8 +107,10 @@ a) How will you define a Thread in parallel computing?
 
 b) Give four characteristic features of a thread.
 ### ans:
-- the program counter, the general registers, the stack pointer, etc.. and the stack ??
-- Thread ID
+1. Runtime stack
+2. Its own resources
+3. Changes the occur in a thread are visible to all other threads
+4. Reading and writing to the same memory address possible but requires synchronisation to prevent race conditions
 
 
 c) Write an openMP function:
