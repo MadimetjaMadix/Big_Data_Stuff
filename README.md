@@ -145,6 +145,8 @@ void matrixMult(int *matrixA, int *matrixB, int N)
 			
 			int indexC[2] = {k, j};
 			int* total = result+getElementLocation2D(indexC, 2*N);
+			
+			#pragma omp critical
 			*total+=(elementA*elementB);
 		}
 	}
