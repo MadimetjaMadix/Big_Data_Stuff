@@ -60,7 +60,7 @@ Flynn’s taxonomy distinguishes multi-processor computer architectures along tw
 (i.) Derive Amdahl’s law.
 ### ans:
 **Amdahl’s derivation** Assumes strong scaling
-Assuming a sequential execution time of To. Only Tf execution time can be parallized in Ts. so the fraction of code that can be impoved is gives as P = Tf/Ts.
+Assuming a sequential execution time of To. Only Tf execution time can be parallized in To. so the fraction of code that can be impoved is gives as P = Tf/To.
 The improved execution time Ta is gives as Ta = (1-P)To + (P/N) (To)
 
 The overall system speed up(S) is S = To/Ta = 1/((1-P)+P/N)  
