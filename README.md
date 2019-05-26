@@ -231,16 +231,30 @@ f(x) = Z 1
 		  1 + x^2  = π
 
 ### ans:
-#######
-#     #
-      #
-     #
-    #
-   #
-   
-   #
+```
 
+...
+static long nsteps = 10000000;
+double pi = 0.0;
+int main()
+{
+	#pragma omp parallel
+	{ /* Start of parallel block */
+		int i;
+		double x;
+		int id = omp_get_thread_num();
+		step = 1.0/(double) nsteps ;
+		double partialSums = 0.0 ;
+		for (i = id, i <= nsteps; i += NumThreads){
+			x = (i-0.5) * step;
+			partialSums += 4.0 / (1.0 + x * x);
+		}
+		#pragma omp critical /* Critical Region
+		pi += partialSums ;
+	} /* End of parallel block */
+}
 
+```
 
 ii.) By Monte-Carlo simulation
 
